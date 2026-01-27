@@ -1,0 +1,249 @@
+/* ====== 全体 ====== */
+.contact-form__content {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* 見出し（Contact） */
+.contact-form__heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form__heading h2 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 44px;
+  font-weight: 400;
+  color: #6b5e52;
+  margin: 0;
+}
+
+/* フォーム本体を中央に寄せて幅を絞る */
+.form {
+  width: min(820px, 100%);
+  margin: 0 auto;
+}
+
+/* ====== 1行（ラベル + 入力） ====== */
+.form__group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 26px;
+}
+
+/* 左ラベル */
+.form__label,
+.form__group-title {
+  width: 220px;
+  /* ←ここで縦のラインが揃う */
+  font-size: 16px;
+  color: #6b5e52;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 必須マーク（※） */
+.form__label--item,
+.form__required {
+  color: #ff6b6b;
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+/* 右側（入力エリア） */
+.form__group-content,
+.form__input {
+  flex: 1;
+}
+
+/* ====== 入力共通 ====== */
+.form input[type="text"],
+.form input[type="email"],
+.form select,
+.form textarea {
+  width: 100%;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #6b5e52;
+  box-sizing: border-box;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #c6bdb4;
+}
+
+.form textarea {
+  min-height: 160px;
+  resize: none;
+}
+
+/* フォーカス時（薄く） */
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: 2px solid rgba(107, 94, 82, 0.18);
+}
+
+/* ====== お名前（姓・名） ====== */
+.name__input {
+  display: flex;
+  gap: 30px;
+}
+
+.name__input input {
+  flex: 1;
+}
+
+/* お名前のエラー表示が input の下でズレやすいので、最小対処 */
+.name__input .form__error {
+  margin-top: 6px;
+}
+
+/* ====== 性別（ラジオ） ====== */
+.gender-input {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  /* 男性｜女性｜その他 の間隔 */
+}
+
+.gender-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #6b5e52;
+  font-size: 14px;
+}
+
+/* ラジオの色（ブラウザ対応していれば茶色に） */
+.gender-option input[type="radio"] {
+  accent-color: #6b5e52;
+}
+
+/* ====== 電話番号（3分割） ====== */
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.phone-input input {
+  width: 160px;
+  /* 2枚目みたいに箱を小さめに */
+}
+
+.phone-input span {
+  color: #6b5e52;
+  font-weight: 600;
+}
+
+/* ====== select（矢印をそれっぽく） ====== */
+.form__input-select,
+.form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding-right: 44px;
+  /* 矢印スペース */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #a79d93 50%),
+    linear-gradient(135deg, #a79d93 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%,
+    0 0;
+  background-size:
+    6px 6px,
+    6px 6px,
+    100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* ====== エラーメッセージ ====== */
+.form__error {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #ff6b6b;
+}
+
+/* ====== ボタン（確認画面っぽい色） ====== */
+.form__button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.form__button-submit {
+  width: 240px;
+  padding: 14px 0;
+  border: none;
+  background: #6b5e52;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form__button-submit:hover {
+  opacity: 0.9;
+}
+
+/* ====== スマホ：縦並びにする ====== */
+@media (max-width: 768px) {
+  .form__group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form__label,
+  .form__group-title {
+    width: 100%;
+  }
+
+  .name__input {
+    flex-direction: column;
+  }
+
+  .phone-input input {
+    width: 100%;
+  }
+}
+
+/* 3つのブロック＋ハイフンを同じ行に並べる */
+.tel-row {
+  display: flex;
+  align-items: flex-start;
+  /* エラーが出ても上揃え */
+  gap: 14px;
+}
+
+/* 1ブロック（入力＋エラー）を縦に積む */
+.tel-field {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  /* input幅と揃える */
+}
+
+/* ハイフンの位置を入力欄の高さに合わせる */
+.tel-sep {
+  margin-top: 12px;
+  /* inputのpaddingに合わせて微調整 */
+  color: #6b5e52;
+  font-weight: 600;
+}
+
+/* 既存の .phone-input の中の span は使わないので無効化（保険） */
+.phone-input span {
+  display: none;
+}

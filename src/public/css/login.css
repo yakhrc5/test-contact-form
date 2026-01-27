@@ -1,0 +1,116 @@
+/* ===== login.css (same as register UI) ===== */
+
+html,
+body {
+  height: 100%;
+  background: #f2ede7;
+}
+
+/* Loginページ背景 */
+.login-form__content {
+  background: #f2ede7;
+  padding: 60px 0 80px;
+}
+
+/* 見出し：中央 */
+.login-form__heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form__heading h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+  color: #6f665c;
+}
+
+/* フォームカード */
+.form {
+  width: 520px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 70px;
+  border: 1px solid #e3dbd3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* 任意：少し浮かせる */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 1項目：縦並び */
+.form__group {
+  display: block;
+  margin-bottom: 26px;
+}
+
+/* ラベル */
+.form__group-title {
+  margin: 0 0 10px;
+}
+
+.form__label--item {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7a7268;
+  display: inline-block;
+}
+
+/* 入力 */
+.form__input--text input {
+  width: 100%;
+  height: 44px;
+  background: #f3f3f3;
+  border: 1px solid #f3f3f3;
+  border-radius: 2px;
+  padding: 0 14px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form__input--text input:focus {
+  border-color: #c9bfb5;
+  background: #fff;
+}
+
+/* エラー */
+.form__error {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #d33;
+  line-height: 1.4;
+  min-height: 16px;
+}
+
+/* ボタン：小さめ＆中央 */
+.form__button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form__button-submit {
+  width: 120px;
+  height: 40px;
+  border: none;
+  background: #7a6f65;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form__button-submit:hover {
+  opacity: 0.9;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .login-form__content {
+    padding: 40px 0 60px;
+  }
+
+  .form {
+    padding: 34px 22px;
+  }
+}

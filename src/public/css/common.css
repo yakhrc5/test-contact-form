@@ -1,0 +1,47 @@
+.header {
+  background: #979393;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* 右上ボタン（ログイン/会員登録など） */
+.header__nav {
+  position: absolute;
+  right: 15px;
+}
+
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 88px;
+  height: 30px;
+
+  border: 1px solid #e3dbd3;
+  background: #f2ede7;
+  color: #6f665c;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.header__link:hover {
+  opacity: 0.85;
+}
+
