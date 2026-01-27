@@ -1,0 +1,76 @@
+/* ===== Thanks page ===== */
+
+body {
+  background: #fff;
+  color: #6f6157;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+/* 全体ラッパー */
+.thanks__content {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* うっすら Thank you（背景文字） */
+.thanks__content::before {
+  content: "Thank you";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 160px;
+  font-weight: 600;
+  color: #f2efec;
+  /* かなり薄い色 */
+  letter-spacing: .12em;
+  white-space: nowrap;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 見出し */
+.thanks__heading {
+  position: relative;
+  z-index: 1;
+  /* 背景文字より前 */
+}
+
+.thanks__heading h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: #6f6157;
+}
+
+/* HOMEボタン */
+.thanks__button {
+  display: block;
+  margin: 24px auto 0;
+  min-width: 96px;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid #8f8177;
+  background: #8f8177;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+
+.thanks__button:hover {
+  filter: brightness(0.95);
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .thanks__content::before {
+    font-size: 88px;
+  }
+}

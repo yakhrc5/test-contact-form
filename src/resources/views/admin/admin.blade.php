@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
@@ -20,7 +20,7 @@
           <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
         </select>
         <select class="filter__select" name="category_id">
-          <option value="" disabled {{ request('category_id') === null ? 'selected' : '' }}>お問い合わせの種類</option>
+          <option value="" {{ request('category_id') == "" ? 'selected' : '' }}>お問い合わせの種類</option>
           @foreach($categories as $category)
             <option value="{{ $category->id }}"
               {{ (string)request('category_id') === (string)$category->id ? 'selected' : '' }}>

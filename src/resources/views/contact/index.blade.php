@@ -15,24 +15,25 @@
       <div class="form__label">
           お名前<span class="form__label--item">※</span>
       </div>
-
-      <div class="form__input name__input">
-        <!-- 姓 -->
-        <div class="name-field">
-          <input type="text" name="last_name" placeholder="例:山田"
-                  value="{{ old('last_name') }}" />
-          @error('last_name')
-            <div class="form__error">{{ $message }}</div>
-          @enderror
+      <div class="form__group-content">
+        <div class="form__input name__input">
+          <!-- 姓 -->
+          <div class="name-field">
+            <input type="text" name="last_name" placeholder="例:山田"
+                    value="{{ old('last_name') }}" />
+            @error('last_name')
+              <div class="form__error">{{ $message }}</div>
+            @enderror
+          </div>
+          <!-- 名 -->
+          <div class="name-field">
+            <input type="text" name="first_name" placeholder="例:太郎" 
+                    value="{{ old('first_name') }}" />
+            @error('first_name')
+              <div class="form__error">{{ $message }}</div>
+            @enderror
+          </div> 
         </div>
-        <!-- 名 -->
-        <div class="name-field">
-          <input type="text" name="first_name" placeholder="例:太郎" 
-                  value="{{ old('first_name') }}" />
-          @error('first_name')
-            <div class="form__error">{{ $message }}</div>
-          @enderror
-        </div> 
       </div>
     </div>   
 
@@ -41,18 +42,20 @@
         性別 <span class="form__required">※</span>
       </div>
       <div class="form__input gender-input">
-        <label class="gender-option">
-          <input type="radio" name="gender" value="1" {{ old('gender') == 1 ? 'checked' : '' }}>
-            男性
-        </label>
-        <label class="gender-option">
-          <input type="radio" name="gender" value="2" {{ old('gender') == 2 ? 'checked' : '' }}>
-            女性
-        </label>
-        <label class="gender-option">
-          <input type="radio" name="gender" value="3" {{ old('gender') == 3 ? 'checked' : '' }}>
-          その他
-        </label>
+        <div class="gender-row">
+          <label class="gender-option">
+            <input type="radio" name="gender" value="1" {{ old('gender') == 1 ? 'checked' : '' }}>
+              男性
+          </label>
+          <label class="gender-option">
+            <input type="radio" name="gender" value="2" {{ old('gender') == 2 ? 'checked' : '' }}>
+              女性
+          </label>
+          <label class="gender-option">
+            <input type="radio" name="gender" value="3" {{ old('gender') == 3 ? 'checked' : '' }}>
+            その他
+          </label>
+        </div>
         @error('gender')
           <div class="form__error">{{ $message }}</div>
         @enderror
@@ -72,12 +75,11 @@
         @enderror
       </div>
     </div>
-     
+
     <div class="form__group">
       <div class="form__label">
         電話番号<span class="form__required">※</span>
       </div>
-
       <div class="form__group-content">
         <div class="tel-row">
           <div class="tel-field">
@@ -86,18 +88,14 @@
               <div class="form__error">{{ $message }}</div>
             @enderror
           </div>
-
           <span class="tel-sep">-</span>
-
           <div class="tel-field">
             <input type="text" name="tel2" placeholder="1234" value="{{ old('tel2') }}">
             @error('tel2')
               <div class="form__error">{{ $message }}</div>
             @enderror
           </div>
-
           <span class="tel-sep">-</span>
-
           <div class="tel-field">
             <input type="text" name="tel3" placeholder="5678" value="{{ old('tel3') }}">
             @error('tel3')
@@ -155,8 +153,8 @@
       </div>
     </div>    
 
-    <div class="form__group">
-      <div class="form__group-title">
+    <div class="form__group form__group--textarea">
+      <div class="form__label">
         お問い合わせ内容<span class="form__label--item">※</span>
       </div>
       <div class="form__group-content">

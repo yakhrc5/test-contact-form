@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AuthController;
+
 
 
 /*
@@ -43,7 +43,6 @@ use App\Http\Controllers\AuthController;
     Route::get('/export', [AdminController::class, 'export']);
     Route::get('/reset', [AdminController::class, 'reset']);
 });
-Route::get('/admin/export', [AdminController::class, 'export'])
-  ->name('admin.export');
+    Route::get('/admin/export', [AdminController::class, 'export'])->name('admin.export');
 
 
