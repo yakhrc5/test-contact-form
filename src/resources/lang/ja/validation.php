@@ -117,7 +117,7 @@ return [
     'uploaded'             => ':attributeのアップロードに失敗しました。',
     'url'                  => ':attributeは、有効なURL形式で指定してください。',
     'uuid'                 => ':attributeは、有効なUUIDでなければなりません。',
-    'failed' => 'ログイン情報が登録されていません',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -132,13 +132,6 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
-        ],
-        'email' => [
-            'required' => 'メールアドレスを入力してください',
-        'email' => 'メールアドレスはメール形式で入力してください',
-        ],
-        'password' => [
-        'required' => 'パスワードを入力してください',
         ],
     ],
 

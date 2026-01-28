@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdminRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,6 +26,7 @@ class AdminRequest extends FormRequest
     return [
     
       'email' => ['required', 'email'],
+      'password' => ['required'],
     ];
     }
     public function messages()
@@ -33,7 +34,8 @@ class AdminRequest extends FormRequest
       return [
         
         'email.required' => 'メールアドレスを入力してください',
-        'email.email' => '有効なメールアドレス形式を入力してください',
+        'email.email' => 'メールアドレスはメール形式で入力してください',
+        'password.required' => 'パスワードを入力してください',
       ];
     }
 }
