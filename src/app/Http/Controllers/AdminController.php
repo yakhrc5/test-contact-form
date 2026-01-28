@@ -49,10 +49,10 @@ class AdminController extends Controller
     }
 
     // 性別
-    if ($request->filled('gender')) {
+    if ($request->filled('gender') && $request->gender !== 'all') {
       $query->where('gender', $request->gender);
     }
-
+    
     // 種類
     if ($request->filled('category_id')) {
       $query->where('category_id', $request->category_id);

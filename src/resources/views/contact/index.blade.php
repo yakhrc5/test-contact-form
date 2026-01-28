@@ -9,7 +9,7 @@
   <div class="contact-form__heading">
       <h2>Contact</h2>
   </div>
-  <form class="form" action="/contacts/confirm" method="post" >
+  <form class="form" action="/contacts/confirm" method="post" novalidate>
     @csrf
     <div class="form__group">
       <div class="form__label">
@@ -122,7 +122,7 @@
     
     <div class="form__group">
       <div class="form__label">
-          建物
+          建物名
       </div>
       <div class="form__group-content">
         <div class="form__input">
