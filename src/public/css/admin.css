@@ -1,10 +1,6 @@
-/* =========================
-   Base
-========================= */
 .admin {
   background: #fff;
   color: #6f6157;
-  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .admin-main {
@@ -21,9 +17,7 @@
   letter-spacing: .06em;
 }
 
-/* =========================
-   Filter
-========================= */
+/* 検索 */
 .admin-filter {
   margin-bottom: 18px;
 }
@@ -51,7 +45,7 @@
   color: #c2b4aa;
 }
 
-/* ▼ selectを画像UIっぽく（矢印を統一） */
+/* ▼ select */
 .filter__select {
   appearance: none;
   -webkit-appearance: none;
@@ -63,12 +57,12 @@
   background-position: right 14px center;
 }
 
-/* date input も同じ高さ・同系色に */
+
 .filter__date {
   padding-right: 14px;
 }
 
-/* Buttons */
+/* ボタン */
 .filter__btn {
   height: 42px;
   border: 1px solid transparent;
@@ -100,9 +94,7 @@
   opacity: .9;
 }
 
-/* =========================
-   Toolbar
-========================= */
+/* ツールバー */
 .admin-toolbar {
   display: flex;
   align-items: center;
@@ -133,9 +125,7 @@
   justify-content: flex-end;
 }
 
-/* =========================
-   Pagination
-========================= */
+/* ページネーション */
 .pagination {
   display: inline-flex;
   list-style: none;
@@ -159,7 +149,7 @@
   text-decoration: none;
 }
 
-/* つなぎ目をきれいに（左ボーダーを消すのは2個目以降だけ） */
+/* つなぎ目 */
 .pagination li+li a,
 .pagination li+li span {
   border-left: none;
@@ -190,9 +180,17 @@
   border-radius: 0 3px 3px 0;
 }
 
-/* =========================
-   Table
-========================= */
+/* テーブル */
+.table__td, .table__th {
+  font-family:
+    "Yu Gothic UI",
+    "Yu Gothic",
+    "Meiryo UI",
+    "Meiryo",
+    "MS PGothic",
+    "MS Gothic",
+    sans-serif;
+}
 .admin-table {
   margin-top: 10px;
 }
@@ -229,7 +227,7 @@
 }
 
 .table__tr:hover .table__td {
-  background: #fbf8f6;
+  background: #e6e2df;
 }
 
 .table__td--action {
@@ -249,9 +247,7 @@
   background: #f6f0eb;
 }
 
-/* =========================
-   Modal
-========================= */
+/* モーダル*/
 .modal {
   position: fixed;
   inset: 0;

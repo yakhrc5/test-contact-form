@@ -63,7 +63,7 @@ class AdminController extends Controller
       $query->whereDate('created_at', $request->date);
     }
 
-    // ★ 最後に取得
+    // 最後に取得
     $contacts = $query->paginate(7)->appends($request->query());
 
     $categories = Category::all();

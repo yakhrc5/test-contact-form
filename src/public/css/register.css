@@ -1,4 +1,4 @@
-/* ===== register.css (spec UI like) ===== */
+/* ===== register.css ===== */
 html,
 body {
   height: 100%;
@@ -38,7 +38,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 1項目：縦並びにする（ここが重要） */
+/* 1項目：縦並びにする*/
 .form__group {
   display: block;
   /* flex を殺す */
@@ -69,9 +69,7 @@ body {
   width: 100%;
   height: 44px;
   background: #f3f3f3;
-  /* 仕様書の薄グレー */
   border: 1px solid #f3f3f3;
-  /* 枠が目立たない */
   border-radius: 2px;
   padding: 0 14px;
   font-size: 14px;
@@ -85,10 +83,10 @@ body {
 }
 
 .form__input--text input::placeholder {
-  color: #b9b1a8;
+  color: #7a756e;
 }
 
-/* エラー表示（必要なら） */
+/* エラー表示*/
 .form__error {
   margin-top: 8px;
   font-size: 12px;
@@ -108,7 +106,6 @@ body {
   height: 40px;
   border: none;
   background: #7a6f65;
-  /* 仕様書っぽい茶グレー */
   color: #fff;
   font-size: 14px;
   cursor: pointer;

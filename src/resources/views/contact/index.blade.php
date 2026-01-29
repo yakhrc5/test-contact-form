@@ -131,7 +131,7 @@
       </div>
     </div>
 
-    <div class="form__group">
+    <div class="form__group form__group--category">
       <div class="form__label">
           お問い合わせの種類<span class="form__label--item">※</span>
       </div>
@@ -167,7 +167,7 @@
       </div>
     </div>
     <div class="form__button">
-        <button class="form__button-submit" type="submit">送信</button>
+        <button class="form__button-submit" type="submit">確認画面</button>
     </div>
   </form>
 </div>

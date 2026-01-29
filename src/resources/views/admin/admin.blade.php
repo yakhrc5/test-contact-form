@@ -24,7 +24,7 @@
           @foreach($categories as $category)
             <option value="{{ $category->id }}"
               {{ (string)request('category_id') === (string)$category->id ? 'selected' : '' }}>
-              {{ $category->name }}
+              {{ $category->content }}
             </option>
           @endforeach
         </select>

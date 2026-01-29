@@ -3,10 +3,9 @@
 body {
   background: #fff;
   color: #6f6157;
-  font-family: "Georgia", "Times New Roman", serif;
 }
 
-/* 全体ラッパー */
+/* 全体 */
 .thanks__content {
   position: relative;
   min-height: 70vh;
@@ -17,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-/* うっすら Thank you（背景文字） */
+/* Thank you（背景文字） */
 .thanks__content::before {
   content: "Thank you";
   position: absolute;
@@ -68,7 +67,7 @@ body {
   filter: brightness(0.95);
 }
 
-/* レスポンシブ */
+/* スマホ */
 @media (max-width: 768px) {
   .thanks__content::before {
     font-size: 88px;
