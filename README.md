@@ -4,7 +4,7 @@
 
 ### Dockerビルド
 
-- https://github.com/yakhrc5/test_contact-form.git
+- git clone https://github.com/yakhrc5/test_contact-form.git
 - cd test_contact-form
 - docker compose up -d --build
 
