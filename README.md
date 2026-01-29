@@ -6,11 +6,11 @@
 
 - https://github.com/yakhrc5/test-contact-form.git
 - cd test_contact-form
-- docker-compose up -d --build
+- docker compose up -d --build
 
 ### Laravel環境構築
 
-- docker-compose exec php bash
+- docker compose exec php bash
 - composer install
 - cp .env.example .env (環境変数を適宜変更)
 - php artisan key:generate
