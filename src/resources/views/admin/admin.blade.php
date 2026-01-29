@@ -12,7 +12,6 @@
     <section class="admin-filter">
       <form class="filter" action="/search" method="GET">
         <input class="filter__input" type="text" name="name" placeholder="名前やメールアドレスを入力してください" value="{{ request('name') }}">
-
         <select class="filter__select" name="gender">
           <option value="">性別</option>
           <option value="all" {{ request('gender') == 'all' ? 'selected' : '' }}>全て</option>
@@ -31,7 +30,6 @@
         </select>
 
         <input class="filter__date" type="date" name="date" value="{{ request('date') }}">
-
         <button class="filter__btn filter__btn--search" type="submit">検索</button>
         <a class="filter__btn filter__btn--reset" href="{{ url('/admin') }}">リセット</a>
       </form>
@@ -45,10 +43,9 @@
       <nav class="toolbar__pager" aria-label="pagination">
         {{ $contacts->onEachSide(2)->links() }}
       </nav>
-
     </section>
 
-        {{-- テーブル --}}
+    {{-- テーブル --}}
     <section class="admin-table">
       <table class="table">
         <thead class="table__head">
@@ -99,8 +96,8 @@
     </section>
     {{-- ★ モーダル（部分view） --}}
     @include('admin._modal')
-    </main>
-  </div>  
+  </main>
+</div>  
 <script>
   (() => {
     const modal = document.getElementById('contact-modal');
