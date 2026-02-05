@@ -12,7 +12,11 @@
 
 - docker compose exec php bash
 - composer install
-- cp .env.example .env (環境変数を適宜変更)
+- cp .env.example .env
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel_db
+      MYSQL_USER: laravel_user
+      MYSQL_PASSWORD: laravel_pass
 - php artisan key:generate
 - php artisan migrate
 - php artisan db:seed
